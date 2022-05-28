@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="Select Date"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/bAddNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
         android:ems="10"
         android:hint="@string/EmployeeNumber"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/bAddNewUser"
         app:layout_constraintEnd_toStartOf="@+id/eTAddress"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,14 +90,14 @@
         android:ems="10"
         android:hint="@string/Address"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/bAddNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/eTEmployeeNumber"
         app:layout_constraintTop_toBottomOf="@+id/eTNewPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bAddNewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -106,5 +106,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/eTphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/UserPhone"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eTEmployeeNumber"
+        app:layout_constraintEnd_toEndOf="@+id/eTNewUserName"
+        app:layout_constraintStart_toStartOf="@+id/eTNewUserName"
+        app:layout_constraintTop_toBottomOf="@+id/eTNewUserName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,5 @@
     <string name="EmployeeNumber">Employee Number</string>
     <string name="Address">Address</string>
     <string name="placeholder">PlaceHolder</string>
+    <string name="UserPhone">Phone Number</string>
 </resources>
