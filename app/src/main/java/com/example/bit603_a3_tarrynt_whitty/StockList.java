@@ -12,6 +12,8 @@ public class StockList {
     private String StockName;
     @ColumnInfo
     private int StockLevel;
+
+
     @ColumnInfo
     private String stockType;
 
@@ -51,27 +53,7 @@ public class StockList {
         return stockType;
     }
 
-    public boolean setStockType(type stockType) {
-        switch (stockType){
-            case BISCUIT:
-                this.stockType = "Biscuit";
-                break;
-            case COOKIE:
-                this.stockType = "Cookie";
-                break;
-            case CAKE:
-                this.stockType = "Cake";
-                break;
-            case INGREDIENT:
-                this.stockType = "Ingredient";
-                break;
-            case OTHER:
-                this.stockType = "other";
-                break;
-            default:
-                return false;
-
-        }
-        return true;
+    public void setStockType(String stockType) {
+        this.stockType = stockType;
     }
 }

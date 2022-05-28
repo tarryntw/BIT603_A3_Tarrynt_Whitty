@@ -3,6 +3,7 @@ package com.example.bit603_a3_tarrynt_whitty;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         database = Room.databaseBuilder(getApplicationContext(), CakesDatabase.class, "CakeDB").allowMainThreadQueries().build();
 
+
         final TextView userNameText = findViewById(R.id.eTUserName);
         final TextView passwordText = findViewById(R.id.eTPassword);
         Button logInButton = findViewById(R.id.bLogIn);
 
-
         logInButton.setOnClickListener(view -> {
-
             //First check if admin, we want to break normal code flow if admin
             String inputUserName = userNameText.getText().toString();
             String inputPassword = passwordText.getText().toString();
@@ -73,22 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     dialogIncorrectUser();
                 }
             }
-
         });
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume called");
-        final TextView userNameText = findViewById(R.id.eTUserName);
-        final TextView passwordText = findViewById(R.id.eTPassword);
-        userNameText.setText(null);
-        passwordText.setText(null);
-
-    }
-
-
 
 
     public static boolean isAdmin(String user, String pass){
