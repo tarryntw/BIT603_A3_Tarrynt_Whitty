@@ -10,7 +10,4 @@ public abstract class CakesDatabase extends RoomDatabase {
 
     public abstract UserAccountDAO accountDao();
     public abstract StockListDAO stockDao();
-
-
-
 }

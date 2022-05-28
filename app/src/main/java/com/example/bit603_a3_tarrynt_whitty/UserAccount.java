@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "USERACCOUNT")
 public class UserAccount {
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey()
     private int employeeNumber;
     @ColumnInfo(name = "UserName")
     private String userName;
@@ -20,6 +20,14 @@ public class UserAccount {
     @ColumnInfo(name = "Address")
     private String address;
 
+    public UserAccount(int employeeNumber, String userName, String passWord, String birthDay, String phoneNumber, String address) {
+        this.employeeNumber = employeeNumber;
+        this.userName = userName;
+        this.passWord = passWord;
+        this.birthDay = birthDay;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 
     //DOB setter and getter, might need replacing
     public String getBirthDay() {

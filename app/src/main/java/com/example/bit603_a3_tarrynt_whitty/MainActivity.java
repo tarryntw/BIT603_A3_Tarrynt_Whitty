@@ -3,7 +3,6 @@ package com.example.bit603_a3_tarrynt_whitty;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,19 +52,10 @@ public class MainActivity extends AppCompatActivity {
             }
             else{
                 //check if user exists
-                List<UserAccount> Accounts = database.accountDao().getAccounts();
-                boolean anyCorrect = false;
-                for (UserAccount account : Accounts) {
-                    if (inputUserName.equals(account.getUserName())){
-                        if(inputPassword.equals(account.getPassWord())){
-                            anyCorrect = true;
-                            break;
-                        }
-                    }
-                }
+                boolean userExists = isAccount(database, inputUserName, inputPassword);
 
                 //if so log in
-                if(anyCorrect){
+                if(userExists){
                     Intent Menu = new Intent(getApplicationContext(), Menu.class);
                     startActivity(Menu);
                 }
@@ -88,6 +78,22 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
+    public static boolean isAccount(CakesDatabase db, String user, String pass){
+        List<UserAccount> Accounts = db.accountDao().getAccounts();
+        boolean anyCorrect = false;
+        for (UserAccount account : Accounts) {
+            if (user.equals(account.getUserName())){
+                if(pass.equals(account.getPassWord())){
+                    anyCorrect = true;
+                    break;
+                }
+            }
+        }
+
+        return anyCorrect;
+    }
+
+
     private void dialogIncorrectUser() {
         // Instantiate
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);

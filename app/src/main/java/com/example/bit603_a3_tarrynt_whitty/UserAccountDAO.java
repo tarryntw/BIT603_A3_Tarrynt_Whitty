@@ -12,15 +12,15 @@ import java.util.List;
 public interface UserAccountDAO {
 
     @Insert
-    public void addCustomer(UserAccount account);
+    void addUser(UserAccount account);
 
     @Query("SELECT * FROM USERACCOUNT")
-    public List<UserAccount> getAccounts();
+    List<UserAccount> getAccounts();
 
     @Delete
     void delete(UserAccount account);
 
     @Update
-    public void updateUsers(UserAccount account);
+    void updateUsers(UserAccount account);
 
 }
