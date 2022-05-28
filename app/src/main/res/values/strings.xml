@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BIT603_A3_Tarrynt_Whitty</string>
+    <string name="logInTitle">Kiwi Cookies and Cakes Inventory</string>
+    <string name="UserHint">User Name</string>
+    <string name="PassHint">Password</string>
+    <string name="LogInButton">Log In</string>
+    <string name="AdminTitle">Admin Menu</string>
+    <string name="VeiwUsers">Veiw Users</string>
+    <string name="AddUser">Add User</string>
+    <string name="RemoveUser">Remove User</string>
+</resources>
