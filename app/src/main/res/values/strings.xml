@@ -8,4 +8,8 @@
     <string name="VeiwUsers">Veiw Users</string>
     <string name="AddUser">Add User</string>
     <string name="RemoveUser">Remove User</string>
+    <string name="NewUserTitle">Add New User</string>
+    <string name="DateOfBirth">Date Of Birth</string>
+    <string name="EmployeeNumber">Employee Number</string>
+    <string name="Address">Address</string>
 </resources>

@@ -66,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        final TextView userNameText = findViewById(R.id.eTUserName);
+        final TextView passwordText = findViewById(R.id.eTPassword);
+        userNameText.setText("");
+        passwordText.setText("");
+
+    }
+
 
     public static boolean isAdmin(String user, String pass){
 
