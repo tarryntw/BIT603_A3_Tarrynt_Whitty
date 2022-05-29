@@ -28,5 +28,13 @@ public class AdminMenu extends AppCompatActivity {
             }
         });
 
+        removeUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent removeUserScreen = new Intent(getApplicationContext(), AdminRemoveUser.class);
+                startActivity(removeUserScreen);
+            }
+        });
+
     }
 }

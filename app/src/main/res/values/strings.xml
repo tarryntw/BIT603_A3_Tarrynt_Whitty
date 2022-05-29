@@ -14,4 +14,7 @@
     <string name="Address">Address</string>
     <string name="placeholder">PlaceHolder</string>
     <string name="UserPhone">Phone Number</string>
+    <string name="TitleRemoveUser">Remove User</string>
+    <string name="RemoveUserHint">Username To Remove</string>
+    <string name="RemoveUserButton">Remove</string>
 </resources>

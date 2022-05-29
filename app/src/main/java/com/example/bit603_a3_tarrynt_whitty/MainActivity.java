@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //if so log in
                 if(userExists){
-                    Intent Menu = new Intent(getApplicationContext(), Menu.class);
+                    Intent Menu = new Intent(getApplicationContext(), UserMenu.class);
                     startActivity(Menu);
                 }
                 else{

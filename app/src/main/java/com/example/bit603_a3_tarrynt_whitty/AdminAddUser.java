@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Calendar;
+import java.util.List;
 
 public class AdminAddUser extends AppCompatActivity {
 
@@ -46,36 +47,40 @@ public class AdminAddUser extends AppCompatActivity {
             String emplyAddrss = address.getText().toString();
 
             //check if strings are empty
-            boolean detailsentered = true;
+            if(usrname.isEmpty() || pssWord.isEmpty() || emplyPhone.isEmpty() || emplyNumber.isEmpty() || emplyAddrss.isEmpty())
+                dialogIssueFound("Not all fields filled", "Please try again");
+            else {
+                //check if user name exists already
+                //get list of users
+                boolean userNameExists = false;
+                List<UserAccount> users = MainActivity.database.accountDao().getAccounts();
+                for(UserAccount user : users){
+                    if (user.getUserName().equals(usrname)) {
+                        userNameExists = true;
+                        break;
+                    }
+                }
+
+                if(userNameExists){
+                    dialogIssueFound("This username already Exists", "Please try again");
+                }
+                else{
+                    //create new user
+                    //grab database from MainActivity and add the new user
+                    UserAccount newUser = new UserAccount(Integer.parseInt(emplyNumber), usrname, pssWord, useBirthDate, emplyPhone, emplyAddrss);
+                    MainActivity.database.accountDao().addUser(newUser);
+                    dialogComplete(usrname);
+                    //clear all text fields
+                    newUserName.setText("");
+                    newPassword.setText("");
+                    employeePhone.setText("");
+                    employeeNumber.setText("");
+                    address.setText("");
+                }
 
 
-            if(usrname.isEmpty())
-                detailsentered = false;
-            if(pssWord.isEmpty())
-                detailsentered = false;
-            if(emplyPhone.isEmpty())
-                detailsentered = false;
-            if(emplyNumber.isEmpty())
-                detailsentered = false;
-            if(emplyAddrss.isEmpty())
-                detailsentered = false;
-            //if no details were entered, error
-            if (!detailsentered){
-                dialogNotComplete();
-            }
 
-            else{
-                //create new user
-                //grab database from MainActivity and add the new user
-                UserAccount newUser = new UserAccount(Integer.parseInt(emplyNumber), usrname, pssWord,useBirthDate, emplyPhone, emplyAddrss);
-                MainActivity.database.accountDao().addUser(newUser);
-                dialogComplete(usrname);
-                //clear all text fields
-                newUserName.setText("");
-                newPassword.setText("");
-                employeePhone.setText("");
-                employeeNumber.setText("");
-                address.setText("");
+
             }
         });
 
@@ -154,12 +159,13 @@ public class AdminAddUser extends AppCompatActivity {
 
     }
 
-    private void dialogNotComplete() {
+    private void dialogIssueFound(String message, String title) {
         // Instantiate
+
         androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(AdminAddUser.this);
         // Set characteristics
-        builder.setMessage("not all information filled")
-                .setTitle("Please try again");
+        builder.setMessage(message)
+                .setTitle(title);
         //add okay button
         builder.setPositiveButton("OK", (dialog, id) -> {
             // OK button was clicked
@@ -186,4 +192,5 @@ public class AdminAddUser extends AppCompatActivity {
         // Show dialog
         dialog.show();
     }
+
 }
