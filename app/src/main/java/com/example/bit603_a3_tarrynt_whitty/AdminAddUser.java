@@ -27,6 +27,8 @@ public class AdminAddUser extends AppCompatActivity {
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
+        //if admin doesnt set a birthday we default to current day
+        useBirthDate = getTodaysDate();
 
         //get onscreen objects
 
