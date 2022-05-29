@@ -36,5 +36,12 @@ public class AdminMenu extends AppCompatActivity {
             }
         });
 
+        viewUsers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent viewUsersScreen = new Intent(getApplicationContext(), AdminUserList.class);
+                startActivity(viewUsersScreen);
+            }
+        });
     }
 }

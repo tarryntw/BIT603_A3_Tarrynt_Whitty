@@ -17,4 +17,5 @@
     <string name="TitleRemoveUser">Remove User</string>
     <string name="RemoveUserHint">Username To Remove</string>
     <string name="RemoveUserButton">Remove</string>
+    <string name="UserNameListTitle">Users</string>
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BIT603_A3_Tarrynt_Whitty">
         <activity
+            android:name=".AdminUserList"
+            android:exported="false" />
+        <activity
             android:name=".AdminRemoveUser"
             android:exported="false" />
         <activity
