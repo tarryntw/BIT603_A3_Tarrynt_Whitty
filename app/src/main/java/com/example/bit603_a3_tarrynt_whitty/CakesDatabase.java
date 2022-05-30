@@ -5,7 +5,7 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {UserAccount.class, StockList.class}, version = 2)
+@Database(entities = {UserAccount.class, StockList.class}, version = 4)
 public abstract class CakesDatabase extends RoomDatabase {
 
     public abstract UserAccountDAO accountDao();

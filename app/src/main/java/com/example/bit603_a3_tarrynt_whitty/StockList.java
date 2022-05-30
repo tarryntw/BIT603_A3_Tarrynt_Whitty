@@ -17,13 +17,16 @@ public class StockList {
     @ColumnInfo
     private String stockType;
 
-    public enum type{
-        BISCUIT,
-        COOKIE,
-        CAKE,
-        INGREDIENT,
-        OTHER
+    public StockList(String stockName, int stockLevel, String stockType) {
+        StockName = stockName;
+        StockLevel = stockLevel;
+        this.stockType = stockType;
     }
+
+    public StockList() {
+
+    }
+
 
     public int getStockID() {
         return StockID;

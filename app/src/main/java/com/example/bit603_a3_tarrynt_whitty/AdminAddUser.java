@@ -17,7 +17,7 @@ public class AdminAddUser extends AppCompatActivity {
     private DatePickerDialog birthDatePicker;
     private Button dateButton;
     private String useBirthDate;
-
+    List<UserAccount> users;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class AdminAddUser extends AppCompatActivity {
         dateButton.setText(getTodaysDate());
         //if admin doesnt set a birthday we default to current day
         useBirthDate = getTodaysDate();
-
+        users = MainActivity.database.accountDao().getAccounts();
         //get onscreen objects
 
         final TextView newUserName = findViewById(R.id.eTNewUserName);
@@ -55,7 +55,7 @@ public class AdminAddUser extends AppCompatActivity {
                 //check if user name exists already
                 //get list of users
                 boolean userNameExists = false;
-                List<UserAccount> users = MainActivity.database.accountDao().getAccounts();
+
                 for(UserAccount user : users){
                     if (user.getUserName().equals(usrname)) {
                         userNameExists = true;
@@ -78,6 +78,7 @@ public class AdminAddUser extends AppCompatActivity {
                     employeePhone.setText("");
                     employeeNumber.setText("");
                     address.setText("");
+                    users = MainActivity.database.accountDao().getAccounts();
                 }
 
 

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BIT603_A3_Tarrynt_Whitty">
         <activity
+            android:name=".UserAddItem"
+            android:exported="false" />
+        <activity
+            android:name=".UserInventoryStatus"
+            android:exported="false" />
+        <activity
+            android:name=".UserMenu"
+            android:exported="false" />
+        <activity
             android:name=".AdminUserList"
             android:exported="false" />
         <activity
@@ -17,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".AdminAddUser"
-            android:exported="false" />
-        <activity
-            android:name=".UserMenu"
             android:exported="false" />
         <activity
             android:name=".AdminMenu"

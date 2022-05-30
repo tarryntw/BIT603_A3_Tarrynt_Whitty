@@ -5,12 +5,17 @@
       <map>
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/drawable/spinnerbuttoncustom.xml" value="0.314" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout-land/activity_admin_adduser.xml" value="0.4656084656084656" />
+        <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout-land/activity_user_add_item.xml" value="0.75" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_admin_adduser.xml" value="0.33" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_admin_menu.xml" value="0.33" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_admin_remove_user.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_admin_user_list.xml" value="0.3109375" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_menu.xml" value="0.5104166666666666" />
+        <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_user_add_item.xml" value="0.22" />
+        <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_user_edit_item.xml" value="0.33" />
+        <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_user_inventory_status.xml" value="0.33" />
+        <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/activity_user_menu.xml" value="0.3109375" />
         <entry key="..\:/projects/Android/BIT603_A3_Tarrynt_Whitty/app/src/main/res/layout/landscapeuser.xml" value="0.55" />
       </map>
     </option>

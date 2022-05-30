@@ -18,4 +18,20 @@
     <string name="RemoveUserHint">Username To Remove</string>
     <string name="RemoveUserButton">Remove</string>
     <string name="UserNameListTitle">Users</string>
+    <string name="Menu">Menu</string>
+    <string name="InventoryStatus">Inventory Status</string>
+    <string name="AddItem">Add Item</string>
+    <string name="AddTestItem">Add Test Items</string>
+    <string name="ClearTestItem">Clear Test Items</string>
+    <string name="StockTitle">Stock</string>
+    <string name="RemoveItem">Remove Item</string>
+    <string name="UpdateItem">Update</string>
+    <string name="Ammount">New Ammount</string>
+    <string name="ItemName">Item Name</string>
+    <string name="ItemType">Item Type</string>
+    <string name="Biscuit">Biscuit</string>
+    <string name="Cookie">Cookie</string>
+    <string name="Cake">Cake</string>
+    <string name="Ingredient">Ingredient</string>
+    <string name="Other">Other</string>
 </resources>
