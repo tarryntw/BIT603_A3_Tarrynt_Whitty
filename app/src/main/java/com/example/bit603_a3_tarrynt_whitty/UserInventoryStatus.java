@@ -19,6 +19,7 @@ public class UserInventoryStatus extends AppCompatActivity {
 
     int index = 0;
     int currentPage= 0;
+    int pages = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class UserInventoryStatus extends AppCompatActivity {
         //get number of times in list
         int itemCount = stock.size();
         //work out the number of pages we will need
-        int pages = itemCount / 5;
+        pages = itemCount / 5;
         currentPage= 0;
         index = 0;
 

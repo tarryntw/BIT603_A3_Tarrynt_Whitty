@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAddItem">
+
+    <TextView
+        android:id="@+id/tAddItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/AddItem"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Badditemtodb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AddItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <EditText
+        android:id="@+id/eTItemtoadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/ItemName"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eTammounttoadd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tAddItemTitle" />
+
+    <EditText
+        android:id="@+id/eTammounttoadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Ammount"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTItemtoadd" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ItemType"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="270dp"
+        android:layout_height="248dp"
+        app:layout_constraintBottom_toTopOf="@+id/Badditemtodb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTammounttoadd">
+
+        <RadioButton
+            android:id="@+id/rBBiscuit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Biscuit" />
+
+        <RadioButton
+            android:id="@+id/rBCookie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cookie" />
+
+        <RadioButton
+            android:id="@+id/rBCake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cake" />
+
+        <RadioButton
+            android:id="@+id/rBIgredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Ingredient" />
+
+        <RadioButton
+            android:id="@+id/rBOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Other" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
