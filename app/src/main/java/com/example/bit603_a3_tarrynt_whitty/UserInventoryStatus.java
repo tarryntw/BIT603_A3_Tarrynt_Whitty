@@ -19,6 +19,8 @@ public class UserInventoryStatus extends AppCompatActivity {
 
     int index = 0;
     int currentPage= 0;
+    int pages = 0;
+    int ammountleft =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +37,10 @@ public class UserInventoryStatus extends AppCompatActivity {
         //get number of times in list
         int itemCount = stock.size();
         //work out the number of pages we will need
-        int pages = itemCount / 5;
+        pages = itemCount / 5;
         currentPage= 0;
         index = 0;
+        ammountleft = itemCount;
 
         //check if we have no stock, print so and disable buttons
         if(itemCount == 0){
@@ -52,9 +55,20 @@ public class UserInventoryStatus extends AppCompatActivity {
             previtems.setAlpha(.5f);
             previtems.setEnabled(false);
             String outstring = "";
-            //make our first page for string
-            for(int i = index; i <= index + 4; i++){
-                outstring = outstring + stock.get(i).getStockName() + " " + stock.get(i).getStockLevel() + " " + stock.get(i).getStockType() + "\n";
+
+            if (itemCount < 5){
+                pages = 1;
+                for(StockList item : stock){
+                    outstring = outstring + item.getStockName() + " " + item.getStockLevel() + " " + item.getStockType() + "\n";
+
+                }
+            }
+            else{
+                //make our first page for string
+                for(int i = index; i <= index + 4; i++){
+                    outstring = outstring + stock.get(i).getStockName() + " " + stock.get(i).getStockLevel() + " " + stock.get(i).getStockType() + "\n";
+                }
+
             }
             currentPage++;
             //add our page number to end
@@ -123,7 +137,7 @@ public class UserInventoryStatus extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //if index too high do nothing
-                if(index >= itemCount - 5){
+                if(index > itemCount - 5){
 
                 }//else display the next page
                 else{

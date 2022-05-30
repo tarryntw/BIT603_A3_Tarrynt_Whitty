@@ -53,18 +53,29 @@ public class AdminAddUser extends AppCompatActivity {
                 dialogIssueFound("Not all fields filled", "Please try again");
             else {
                 //check if user name exists already
+                //check if ID exists already
                 //get list of users
                 boolean userNameExists = false;
-
+                boolean userIDExists = false;
                 for(UserAccount user : users){
                     if (user.getUserName().equals(usrname)) {
                         userNameExists = true;
                         break;
                     }
                 }
+                for(UserAccount user : users){
+                    String currentuserid = Integer.toString(user.getEmployeeNumber());
+                    if (currentuserid.equals(emplyNumber)) {
+                        userIDExists = true;
+                        break;
+                    }
+                }
 
                 if(userNameExists){
                     dialogIssueFound("This username already Exists", "Please try again");
+                }
+                else if(userIDExists){
+                    dialogIssueFound("User ID exists", "Please try again");
                 }
                 else{
                     //create new user
